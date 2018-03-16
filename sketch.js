@@ -24,26 +24,26 @@ function draw() {
 	colorBG.b = map(circle.x, 0, width, 255, 0);
 	if (klikMouse) {
 		background(colorBG.r,colorBG.g,colorBG.b);		
-		showCircle();
+		showCircle(mouseX, mouseY);
 		bounce();
 		move();
 		
 	} else {
 		background(colorBG.r,colorBG.g,colorBG.b);
-		showCircle();
+		showCircle(mouseX, mouseY);
 	}	
 }
 
-function showCircle() {
-		noStroke();
-		fill(240, 155, 60);
-		ifInsideCircle();
+function showCircle(px, py) {
+	noStroke();
+	fill(240, 155, 60);
+	ifInsideCircle(px, py);
 	ellipse(circle.x, circle.y, circle.diameter, circle.diameter);
 }
 
-function ifInsideCircle(){
+function ifInsideCircle(px, py){
 	let d = dist(mouseX,mouseY,circle.x,circle.y);
-	if (d < circle.diameter) {
+	if (d < circle.diameter/2) {
 		fill(200,0,100);
 	}
 }
