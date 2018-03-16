@@ -1,9 +1,9 @@
 var circle = {
 	x : 0,
 	y : 180,
-	diameter : 50,
-	Xspeed : 4,
-	Yspeed : -5
+	diameter : 120,
+	Xspeed : 8,
+	Yspeed : -9
 };
 
 var klikMouse = false;
@@ -15,7 +15,7 @@ colorBG ={
 }
 
 function setup() {
-	createCanvas(640, 360);
+	createCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
