@@ -42,8 +42,8 @@ function showCircle() {
 }
 
 function ifInsideCircle(){
-	if ((mouseX >= circle.x-(circle.diameter/2) && mouseX <= (circle.diameter/2)+circle.x)
-		&& (mouseY >= circle.y-(circle.diameter/2) && mouseY <= (circle.diameter/2)+circle.y)) {
+	let d = dist(mouseX,mouseY,circle.x,circle.y);
+	if (d < circle.diameter) {
 		fill(200,0,100);
 	}
 }
